@@ -1,0 +1,11 @@
+c:\Users\thequ\Documents\Programming projects\kindleflex\obj\Debug\netcoreapp3.1\kindleflex.csprojAssemblyReference.cache
+c:\Users\thequ\Documents\Programming projects\kindleflex\obj\Debug\netcoreapp3.1\kindleflex.AssemblyInfoInputs.cache
+c:\Users\thequ\Documents\Programming projects\kindleflex\obj\Debug\netcoreapp3.1\kindleflex.AssemblyInfo.cs
+c:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.exe
+C:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.deps.json
+C:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.runtimeconfig.json
+C:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.runtimeconfig.dev.json
+c:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.dll
+c:\Users\thequ\Documents\Programming projects\kindleflex\bin\Debug\netcoreapp3.1\kindleflex.pdb
+c:\Users\thequ\Documents\Programming projects\kindleflex\obj\Debug\netcoreapp3.1\kindleflex.dll
+c:\Users\thequ\Documents\Programming projects\kindleflex\obj\Debug\netcoreapp3.1\kindleflex.pdb
