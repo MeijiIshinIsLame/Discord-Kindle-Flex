@@ -16,6 +16,8 @@ public class MemoryReader
     [DllImport("kernel32.dll")]
     public static extern bool ReadProcessMemory(int hProcess, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
 
+    [DllImport("user32.dll")]
+    static extern int GetWindowText(int hWnd, StringBuilder text, int count);
     public MemoryReader(string _processName)
     {
         this.processName = _processName;
@@ -53,6 +55,12 @@ public class MemoryReader
         }
     }
 
+    public string GetProcessWindowTitle(string processName)
+    {
+        process = GetProcessFromName(processName);
+        return process.MainWindowTitle;
+    }
+
     public int ReadAddress(int addr)
     {
         int bytesRead = 0;
@@ -62,11 +70,9 @@ public class MemoryReader
         {
             ReadProcessMemory((int)processHandle, addr, buffer, buffer.Length, ref bytesRead);
         }
-        catch (Exception e)
+        catch
         {
-            //Console.WriteLine(e.Message);
-            //Console.WriteLine("Cannot read address");
-            return 0;
+            return -1;
         }
         return BitConverter.ToInt32(buffer, 0);
     }
@@ -83,7 +89,6 @@ public class MemoryReader
 
             contents = ReadAddress(contents + offset);
         }
-
         return contents;
     }
 }

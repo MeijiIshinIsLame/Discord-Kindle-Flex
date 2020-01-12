@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;  
 
 namespace kindleflex
 {
@@ -35,7 +36,8 @@ namespace kindleflex
 
         public bool InMenu()
         {
-            if (currentPage == 0)
+            //Position always starts at 1, so it either errored at -1 or is being read as 0.
+            if (currentPage <= 0)
                 return true;
             else
                 return false;
@@ -43,14 +45,47 @@ namespace kindleflex
 
         public string GetPercentComplete()
         {
-            UpdateAllValues();
-
-            //You would assume this 0.2 does nothing, and you would be correct.
+            //You would assume this 0.22 does nothing, and you would be correct.
             //However, for whatever reason kindle percent calculation is weird and this is the only way it lines up.
             //So here it will stay.
-            double decimalPercentage = (((double)currentPage / maxPage) * 100) + 0.2;
+            double decimalPercentage = (((double)currentPage / maxPage) * 100) + 0.22;
+            //decimalPercentage = Math.Round(decimalPercentage) + 1;
             int intPercentage = ((int)decimalPercentage) + 1;
+
+            if (intPercentage > 100) //at the very end it goes to 101
+                intPercentage = 100;
+
+            //Yep, I don't know why but percentage in kindle incriments to 1% at position 2...
+            if (currentPage == 1) 
+                intPercentage = 1;
+
             return $"{intPercentage}%";
         }
+
+        public string GetBookTitle()
+        {
+            if (InMenu())
+                return null;
+            else
+            {
+                string windowTitle = memoryReader.GetProcessWindowTitle("Kindle");
+                string bookTitle = Regex.Split(windowTitle, "Kindle for PC 3 - ")[1]; //get only book title
+                return bookTitle;
+            }
+        }
+        public string GetStatusUpdate()
+        {
+            if (InMenu())
+            {
+                return "Kindle - in main menu.";
+            }
+            else
+            {
+                string percentComplete = GetPercentComplete();
+                string bookTitle = GetBookTitle();
+                return $"Reading: {percentComplete} - {bookTitle}";
+            }
+        }
+
     }
 }

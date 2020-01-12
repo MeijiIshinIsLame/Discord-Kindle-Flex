@@ -13,10 +13,11 @@ namespace kindleflex
 
             while (true)
             {
-                string percentComplete = kindle.GetPercentComplete();
-                Console.WriteLine(percentComplete);
-                Thread.Sleep(1000);
+                kindle.UpdateAllValues();
+                Console.WriteLine(kindle.GetStatusUpdate());
+                Thread.Sleep(3000);
             }
         }
+
     }
 }
