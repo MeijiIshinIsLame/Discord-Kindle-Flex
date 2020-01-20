@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\thequ\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\thequ\\.nuget\\packages"
-    ]
-  }
-}

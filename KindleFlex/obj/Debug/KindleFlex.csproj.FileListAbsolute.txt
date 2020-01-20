@@ -1,0 +1,8 @@
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\bin\Debug\KindleFlex.exe.config
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\bin\Debug\KindleFlex.exe
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\bin\Debug\KindleFlex.pdb
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\obj\Debug\KindleFlex.Properties.Resources.resources
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\obj\Debug\KindleFlex.csproj.GenerateResource.cache
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\obj\Debug\KindleFlex.exe
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\obj\Debug\KindleFlex.pdb
+C:\Users\thequ\source\repos\KindleFlex\KindleFlex\obj\Debug\KindleFlex.MainWindow.resources
