@@ -1,3 +1,5 @@
-This was a program made for me to set my kindle book progress as a discord status. I later found out that logging into discord as a bot was a bannable offense now, so I tried taking the approach of renaming the window and setting my game status as that. Unfortunately discord did not recognize it so I've probably gotta rename a window discord does recognize to make this work. 
+### Kindle Reader
 
-Unfortunately, that means that this thing basically has no hope of ever being something other people will want to use so it's now for my own personal use lol.
+This was originally made to read how much the user has read of a kindle book and set it as the user's discord status. However, I found out after finishing the module that reads values from kindle that usrebots on discord is now a bannable offense.
+
+So, unfortunately this project is now abandoned, but it was still fun to re-leard how to read values and pointers in RAM.
